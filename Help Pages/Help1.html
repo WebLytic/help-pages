@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Ad Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container-main">
+            <div class="navbar help-navbar">
+                <div class="logo">
+                    <a href="#"><img class="payolie-help-logo" src="./images/payolielogo.svg" alt="logo"></a>
+                </div>
+                <div class="search-bar payolie-help-search">
+                    <form>
+                        <button class="search-icon payolie-help-search-icon" type="submit"><img src="./images/search.svg"></button>
+                        <input type="text" placeholder="Try “Change my username”" name="Try “Change my username”" class="search payolie-help-input">
+                    </form>
+                </div>
+                <div class="payolie-help-btn"><a href="#" class="join-beta-btn">Join Beta</a></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container-main">
+                <div class="slider-main-container">
+                    <div class="slider">
+                      <div class="slider-inner" style="background-color: #ffffff;">
+                        <div class="card">
+                          <a href="#">Help center <img src="./images/breadcrumb-chevron.svg"></a>
+                        </div>
+            
+                        <div class="card">
+                          <a href="#">Buyer <img src="./images/breadcrumb-chevron.svg"></a>
+                        </div>
+            
+                        <div class="card">
+                          <a href="#">Account and Security <img src="./images/breadcrumb-chevron.svg"></a>
+                        </div>
+            
+                        <div class="card">
+                          <a href="#" class="active payolie-help-active">General account management</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="payolie-help-one-section">
+            <div class="container-main">
+                <div class="payolie-help-one-heading">
+                    <h4>General account management</h4>
+                    <ul>
+                        <li><a href="#">Referral Program</a></li>
+                        <li><a href="#">Known issues</a></li>
+                        <li><a href="#">Why was my account disabled</a></li>
+                        <li><a href="#">Buyeer FAQS</a></li>
+                        <li><a href="#">How Payolie Works</a></li>
+                        <li><a href="#">How do I change my username</a></li>
+                        <li><a href="#">Account and profile settings</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <!---Footer--->
+     <div class="container-main">
+        <section id="footer">
+            <div class="footer-nav">
+                <div class="footer-head"><p>Categories</p><img class="footer-toggle-btn" src="./images/arrowdown.svg"></div>
+                <ul class="footer-toggle-container">
+                    <li><a href="#">Digital Artwork</a></li>
+                    <li><a href="#">E-Books</a></li>
+                    <li><a href="#">Video Games</a></li>
+                    <li><a href="#">Video Templates & FX</a></li>
+                    <li><a href="#">Audio Files</a></li>
+                    <li><a href="#">Programming & Tech</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-head"><p>About</p><img class="footer-toggle-btn"  src="./images/arrowdown.svg"></div>
+                <ul class="footer-toggle-container">
+                    <li><a href="#">About Us</a></li>
+                <li><a href="#">Partnerships</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-head"><p>Support</p><img class="footer-toggle-btn"  src="./images/arrowdown.svg"></div>
+                <ul class="footer-toggle-container">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-head"><p>Community</p><img class="footer-toggle-btn"  src="./images/arrowdown.svg"></div>
+                <ul class="footer-toggle-container">
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Forum</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-head"><p>Social</p><img class="footer-toggle-btn"  src="./images/arrowdown.svg"></div>
+                <ul class="footer-toggle-container">
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Clubhouse</a></li>
+                </ul>
+            </div>
+        </section>
+
+         <!---Copyrights--->
+        <section id="copyright">
+            <div class="container-main">
+                <div class="copyright-main">
+                    <a href="#">LOGO</a>
+                    <p>Copyright 2021, made with ❤️ by Yaakoub El Hbari</p>
+                </div>
+            </div>
+        </section>
+
+    <script>
+
+        // Breadcrumb Slider
+
+        const slider = document.querySelector('.slider-inner');
+        const progressBar = document.querySelector('.prog-bar-inner');
+
+                let sliderGrabbed = false;
+
+                slider.parentElement.addEventListener('scroll', (e) => {
+                    progressBar.style.width  = `${getScrollPercentage()}%`
+                })
+
+                slider.addEventListener('mousedown', (e) => {
+                    sliderGrabbed = true;
+                    slider.style.cursor = 'grabbing';
+                })
+
+                slider.addEventListener('mouseup', (e) => {
+                    sliderGrabbed = false;
+                    slider.style.cursor = 'grab';
+                })
+
+                slider.addEventListener('mouseleave', (e) => {
+                    sliderGrabbed = false;
+                })
+
+                slider.addEventListener('mousemove', (e) => {
+                    if(sliderGrabbed){
+                        slider.parentElement.scrollLeft -= e.movementX;
+                    }
+                })
+
+
+                function getScrollPercentage(){
+                return ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth) ) * 100);
+                }
+
+
+            // Footer Toggle Btn
+            const questions = document.querySelectorAll(".footer-nav");
+
+                questions.forEach(function (question) {
+                    const btn = question.querySelector(".footer-toggle-btn");
+                    const footerContainer = question.querySelector(".footer-toggle-container");
+
+                    btn.addEventListener("click", function () {
+
+                        btn.classList.toggle('rotate-footer-btn');
+                        footerContainer.classList.toggle("show-toggle-container");
+                    });
+                });
+  </script>
+
+</body>
+</html>
